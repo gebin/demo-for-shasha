@@ -3,7 +3,8 @@
   "data" : [
     {
       "title" : "字体实践",
-      "img"  :"imgs/font.png"
+      "img" : "imgs/font.png",
+      "url" : "font.html" 
     }
   ]
 }

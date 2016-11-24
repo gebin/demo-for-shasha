@@ -9,11 +9,11 @@ $(function(){
 				res.data && res.data.forEach(function(item){
 					$articles.append(
 						'<li class="article">'+
-							'<a href="#" class="a-container">'+
+							'<a href="'+item.url+'" class="a-container">'+
 								'<img src="'+item.img+'" alt="">'+
 							'</a>'+
 							'<p class="p-tip">'+item.title+'</p>'+
-						'</li>')
+						'</li>');
 				})
 			}
 		}
