@@ -23,6 +23,8 @@ $(function(){
 						'</li>';
 					$articles.append(str);
 				})
+
+				$articles.append('<li class="placeholder"></li>');
 			}
 		}
 	})
