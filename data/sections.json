@@ -2,9 +2,11 @@
   "status" : true,
   "data" : [
     {
-      "title" : "字体实践",
+      "title" : "font",
       "img" : "imgs/font.png",
-      "url" : "font.html" 
+      "url" : "font.html",
+      "color" : "bg-green",
+      "tip" : "font学习"
     }
   ]
 }

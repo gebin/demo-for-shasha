@@ -7,13 +7,21 @@ $(function(){
 		success : function(res){
 			if(res.status){
 				res.data && res.data.forEach(function(item){
-					$articles.append(
+					var str =
 						'<li class="article">'+
-							'<a href="'+item.url+'" class="a-container">'+
-								'<img src="'+item.img+'" alt="">'+
-							'</a>'+
-							'<p class="p-tip">'+item.title+'</p>'+
-						'</li>');
+							'<a href="'+item.url+'" target="_blank" class="a-container '+item.color+' fs-48">';
+
+					// 判断有没有图片
+					if(item.img){
+						str += '<img src="'+item.img+'" alt="">'
+					} else {
+						str += item.title;
+					}
+
+					str = str + '</a>'+
+							'<p class="p-tip">'+item.tip+'</p>'+
+						'</li>';
+					$articles.append(str);
 				})
 			}
 		}
