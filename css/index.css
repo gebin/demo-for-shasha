@@ -62,7 +62,7 @@ body{
     position: fixed;
     bottom: 0;
     text-align: center;
-    padding: 20px;
+    padding: 10px 20px;
     width: 100%;
     box-sizing: border-box;
     border-top: 1px solid #ddd;
@@ -76,7 +76,6 @@ body{
 	.article-list .article{
 		width: 40%;
 	}
-
 	.article-list .placeholder{
 		width: 40%;
 	}
