@@ -63,6 +63,10 @@ body{
 	.article-list .article{
 		width: 40%;
 	}
+
+	.article-list .placeholder{
+		width: 40%;
+	}
 }
 
 
@@ -71,6 +75,9 @@ body{
 		justify-content:space-around;
 	}
 	.article-list .article{
+		width: 100%;
+	}
+	.article-list .placeholder{
 		width: 100%;
 	}
 }
