@@ -7,6 +7,13 @@
       "url" : "font.html",
       "color" : "bg-green",
       "tip" : "font学习"
+    },
+    {
+      "title" : "git",
+      "img" : "",
+      "url" : "git.html",
+      "color" : "bg-green",
+      "tip" : "git入门和github使用"
     }
   ]
 }
