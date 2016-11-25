@@ -58,17 +58,6 @@ body{
 	text-align: right;
 }
 
-.footer{
-    position: fixed;
-    bottom: 0;
-    text-align: center;
-    padding: 10px 20px;
-    width: 100%;
-    box-sizing: border-box;
-    border-top: 1px solid #ddd;
-    background-color: #f6f6f6;
-}
-
 @media screen and (max-width: 960px) {
 	.content .article-list{
 		justify-content:space-around;
