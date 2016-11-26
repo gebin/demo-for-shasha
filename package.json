@@ -1,0 +1,24 @@
+{
+  "name": "demo-for-shasha",
+  "version": "1.0.0",
+  "description": "前端学习项目",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --port 1314",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gebin/demo-for-shasha.git"
+  },
+  "author": "bin.ge",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gebin/demo-for-shasha/issues"
+  },
+  "homepage": "https://github.com/gebin/demo-for-shasha#readme",
+  "devDependencies": {
+    "webpack": "^1.12.0",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
