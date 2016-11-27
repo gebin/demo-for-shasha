@@ -2,18 +2,11 @@
   "status" : true,
   "data" : [
     {
-      "title" : "font",
-      "img" : "imgs/font.png",
-      "url" : "font.html",
-      "color" : "bg-green",
-      "tip" : "font学习"
-    },
-    {
-      "title" : "git",
+      "title" : "html结构",
       "img" : "",
-      "url" : "git.html",
+      "url" : "assignment-1.html",
       "color" : "bg-green",
-      "tip" : "git入门和github使用"
+      "tip" : "html元素的认识和使用"
     }
   ]
 }
