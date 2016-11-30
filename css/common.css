@@ -27,6 +27,22 @@ ul{
 .bg-green{
 	background-color: #a9e34b;
 }
+.bg-gray{
+	background-color: #ced4da
+}
+.bg-red{
+	background-color: #ff8787;
+}
+.bg-pink{
+	background-color: #f783ac;
+}
+.bg-grape{
+	background-color: #e599f7;
+}
+.bg-violet{
+	background-color: #9775fa;
+}
+
 
 /* font-size */
 .fs-48{

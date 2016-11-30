@@ -30,7 +30,7 @@ $(function(){
 						str += item.title;
 					}
 					str = str + '</a>'+
-							'<p class="p-tip">'+item.tip+'</p>'+
+							'<p class="p-tip"><a href="'+item.tip_url+'">'+item.tip+'<span class="click-tip">点我</span></a></p>'+
 						'</li>';
 					$articles.append(str);
 				});
