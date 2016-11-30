@@ -8,6 +8,14 @@
       "tip_url" : "assignment-1-tip.html",
       "color" : "bg-green",
       "tip" : "html元素的认识和使用"
+    },
+    {
+      "title" : "致莎莎",
+      "img" : "",
+      "url" : "letter.html",
+      "tip_url" : "javascript:void();",
+      "color" : "bg-pink",
+      "tip" : "❤"
     }
   ]
 }
