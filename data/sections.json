@@ -10,12 +10,12 @@
       "tip" : "html元素的认识和使用"
     },
     {
-      "title" : "致莎莎",
+      "title" : "CSS初识",
       "img" : "",
-      "url" : "letter.html",
+      "url" : "assignment-2.html",
       "tip_url" : "javascript:void();",
       "color" : "bg-pink",
-      "tip" : "❤"
+      "tip" : "尝试使用CSS布局"
     }
   ]
 }
