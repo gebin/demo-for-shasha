@@ -29,7 +29,29 @@
 			作业二是检验对CSS样式的了解和使用，涉及到有选择器，font，color，background，border，width，height，padding，margin，text-align，vertical-align，display，float等。
 		</p>
 		<p>
-			比较容易被难住的布局的使用，如何让
+			比较容易被难住的布局的使用。比如display，有很多类型，none隐藏，block块（独占一行），inline内联（自身宽度），inline-block内联块（可以改变自身宽度和高度），flex（CSS高级布局属性）。通过设置display我们就可以让元素具备了能否一行多个或者一个的能力。
+		</p>
+		<div>
+			<div style="display:none;">我看不见</div>
+			<div class="bg-green"style="display:block;">block我占一行</div>
+			<div class="bg-grape" style="display:inline;">inline我只有这么长</div>
+			<div class="bg-orange" style="display:inline-block;width:250px;height:50px;">inline-block我能改变自己长度和宽度</div>
+		</div>
+		<p>
+			float是指浮动，包括left和right两种，顾名思义就是向左浮动和向右浮动。
+		</p>
+		<div style="overflow:hidden">
+			<p class="bg-grape" style="float:left">left</p>
+			<p class="bg-orange" style="float:right">right</p>
+		</div>
+		<p>
+			text-align其实就是让<b>子元素</b>横向居中。
+		</p>
+		<p>
+			vertical-align是让元素自身纵向布局。
+		</p>
+		<p>
+			line-height 是设置每行文字的行高，当line-height == height的时候，单行文字垂直居中。
 		</p>
 	</section>
 	<footer class="footer">
