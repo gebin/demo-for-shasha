@@ -59,7 +59,7 @@
 	<script src="js/aqs.js"></script>	
 	<script>
 
-		var index = 0,
+		var index = Number(window.localStorage.index || 0),
 			aqsCount = aqs.length;
 		var $title = $('#title'),
 			$question = $('#question'),
@@ -73,6 +73,7 @@
 				$title.text('题目'+(index+1));
 				$question.text(aqs[index].q+'？');
 				$answer.text('揭晓答案');
+				window.localStorage.index = index;
 			}
 
 			function checkAq(type){
