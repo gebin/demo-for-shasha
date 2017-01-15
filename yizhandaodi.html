@@ -45,7 +45,17 @@
 		.prev{
 			left: 20px; 
 		}
-
+		
+		.position{
+			display: inline-block;
+			width: 36px;
+		    position: absolute;
+		    bottom: 50px;
+		    left: 50%;
+		    transform: translateX(-50%);
+		    height: 30px;
+		    border-width: 0;
+		}
 	</style>
 <body>
 	<div class="subject">
@@ -54,6 +64,7 @@
 		<div id="answer"></div>
 	</div>
 	<span class="btn prev"> 上一题 </span>
+	<input class="position" type="number">
 	<span class="btn next"> 下一题 </span>
 	<script src="js/jquery.js"></script>	
 	<script src="js/aqs.js"></script>	
@@ -64,6 +75,7 @@
 		var $title = $('#title'),
 			$question = $('#question'),
 			$answer = $('#answer'),
+			$position = $('.position'),
 			$prev = $('.prev'),
 			$next = $('.next');
 
@@ -95,6 +107,13 @@
 					return true;
 				}
 			}
+
+			$position.on('input',function(e){
+				var target = $(e.target),
+					pos = target.val();
+				index = Number(pos)-1;
+				renderAq();
+			});
 
 			$answer.click(function(e){
 				var target = $(e.target),
