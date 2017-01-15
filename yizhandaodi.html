@@ -111,8 +111,13 @@
 			$position.on('input',function(e){
 				var target = $(e.target),
 					pos = target.val();
-				index = Number(pos)-1;
-				renderAq();
+
+				if(pos && Number(pos)){
+					index = Number(pos)-1;
+					if(index < aqsCount){
+						renderAq();						
+					}
+				}
 			});
 
 			$answer.click(function(e){
