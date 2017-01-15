@@ -83,6 +83,7 @@
 
 			function renderAq(){
 				$title.text('题目'+(index+1));
+				$position.val(index+1);
 				$question.text(aqs[index].q+'？');
 				$answer.text('揭晓答案');
 				window.localStorage.index = index;
