@@ -8,14 +8,53 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<link rel="stylesheet" href="css/common.css">
+	<style type="text/css">
+		body{
+			background: #ffe3e3;	
+		}
+		.subject{
+			padding: 20px;
+		}
+		
+		#title{
+			font-size: 24px;
+			text-align: center;
+		}
+
+		#answer{
+			padding-top:10px; 
+			padding-bottom:10px; 
+			color: #4c6ef5;
+		}
+
+		.btn {
+		    border: 2px solid #fff;
+		    border-radius: 5px;
+		    width: 100px;
+		    line-height: 30px;
+		    display: inline-block;
+		    text-align: center;
+		    position: absolute;
+		    bottom: 50px;
+		}
+
+		.next{
+			right: 20px; 
+		}
+
+		.prev{
+			left: 20px; 
+		}
+
+	</style>
 <body>
-	<div>
+	<div class="subject">
 		<h1 id="title">题目</h1>
 		<div id="question"></div>
 		<div id="answer"></div>
-		<span class="prev"> < </span>
-		<span class="next"> > </span>
 	</div>
+	<span class="btn prev"> 下一题 </span>
+	<span class="btn next"> 上一题 </span>
 	<script src="js/jquery.js"></script>	
 	<script src="js/aqs.js"></script>	
 	<script>
@@ -31,27 +70,53 @@
 		$(function(){ 
 
 			function renderAq(){
-				$title.text('题目'+index);
-				$question.text(aqs[index].q);
-				$question.text(aqs[index].a);
+				$title.text('题目'+(index+1));
+				$question.text(aqs[index].q+'？');
+				$answer.text('揭晓答案');
 			}
 
-			$next.click(function(e){
-				index ++;
-				if(index > aqsCount){
-					index = 0;
+			function checkAq(type){
+				if(type == 'next'){
+					index++;
+					if(index == aqsCount){
+						index = 0;
+					}
+				} else {
+					index--;
+					if(index < 0){
+						index = (aqsCount-1);
+					}
 				}
-				renderAq();
+
+				if(!aqs[index].q || !aqs[index].a){
+					return checkAq(type);
+				} else {
+					return true;
+				}
+			}
+
+			$answer.click(function(e){
+				var target = $(e.target),
+					text = target.text();
+				if(text != '揭晓答案'){
+					return;
+				} 
+				$answer.text(aqs[index].a);
 			})
 
-			$prev.click(function(e){
-				index --;
-				if(index < 0){
-					index = aqsCount;
+			$next.click(function(e){ 
+				if(checkAq('next')){
+					renderAq();
 				}
-				renderAq();
 			})
 
+			$prev.click(function(e){ 
+				if(checkAq('prev')){
+					renderAq();
+				}
+			})
+
+			renderAq();
 		})
 	</script>
 </body>
