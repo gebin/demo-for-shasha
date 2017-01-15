@@ -13,16 +13,45 @@
 		<h1 id="title">题目</h1>
 		<div id="question"></div>
 		<div id="answer"></div>
+		<span class="prev"> < </span>
+		<span class="next"> > </span>
 	</div>
 	<script src="js/jquery.js"></script>	
+	<script src="js/aqs.js"></script>	
 	<script>
-		$(function(){
-			var aqs = [];
-			// 
-			$.getJSON('../data/aqs.json',function(res){
-				aqs = res;
-				debugger
+
+		var index = 0,
+			aqsCount = aqs.length;
+		var $title = $('#title'),
+			$question = $('#question'),
+			$answer = $('#answer'),
+			$prev = $('.prev'),
+			$next = $('.next');
+
+		$(function(){ 
+
+			function renderAq(){
+				$title.text('题目'+index);
+				$question.text(aqs[index].q);
+				$question.text(aqs[index].a);
+			}
+
+			$next.click(function(e){
+				index ++;
+				if(index > aqsCount){
+					index = 0;
+				}
+				renderAq();
 			})
+
+			$prev.click(function(e){
+				index --;
+				if(index < 0){
+					index = aqsCount;
+				}
+				renderAq();
+			})
+
 		})
 	</script>
 </body>
