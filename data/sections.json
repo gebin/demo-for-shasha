@@ -8,6 +8,14 @@
       "tip_url" : "assignment-1-tip.html",
       "color" : "bg-green",
       "tip" : "html元素的认识和使用"
+    },
+    {
+      "title" : "CSS初识",
+      "img" : "",
+      "url" : "assignment-2.html",
+      "tip_url" : "assignment-2-tip.html",
+      "color" : "bg-pink",
+      "tip" : "尝试使用CSS布局"
     }
   ]
 }
