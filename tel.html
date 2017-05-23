@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title> 
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+</head>
+<body>
+	<a id="tel" href="tel:18612539136">拨打</a>
+	<script>
+	var telE = document.getElementById('tel');
+
+    if (document.createEvent) {
+    	var event = document.createEvent("HTMLEvents");
+    	event.initEvent("click", true, true);
+    	telE.dispatchEvent(event);
+    } 
+	</script>
+</body>
+</html>
